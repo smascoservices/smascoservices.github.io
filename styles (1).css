@@ -1,0 +1,82 @@
+:root{
+  /* ألوان مقتبسة من شعارك (أزرق + أخضر ليموني) */
+  --bg:#f6fbff;
+  --text:#072039; /* نص داكن قريب من الأزرق */
+  --muted:#5b6b7a;
+  --primary:#0b63c6; /* الأزرق الأساسي من الشعار */
+  --accent:#6fd22c;  /* الأخضر الليموني من الشعار */
+  --surface:#ffffff;
+  --radius:12px;
+  --container:1200px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{font-family:'Cairo', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.6;color:var(--text);background:var(--bg);margin:0}
+.container{max-width:var(--container);margin:0 auto;padding:28px}
+.site-header{background:transparent;padding:18px 0}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.logo img{height:42px}
+.nav a{margin-inline:12px;color:var(--text);text-decoration:none}
+.nav a.call-wa{display:inline-flex;align-items:center;gap:8px}
+.wa-badge{display:inline-block;width:18px;height:18px;border-radius:4px;background:var(--accent);box-shadow:0 2px 6px rgba(111,210,44,0.18)}
+.btn-primary{background:linear-gradient(90deg,var(--primary),#0a53b2);color:#fff;padding:12px 18px;border-radius:10px;text-decoration:none;display:inline-block;box-shadow:0 10px 30px rgba(11,99,198,0.12);transition:transform .18s ease,box-shadow .18s ease}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(11,99,198,0.18)}
+.btn-ghost{background:transparent;border:2px solid rgba(15,23,42,0.08);padding:10px 16px;border-radius:10px;color:var(--text);text-decoration:none}
+.btn-outline{background:transparent;border:1px solid rgba(15,23,42,0.08);padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--text)}
+
+.hero{background:linear-gradient(180deg, #f8fbff 0%, #f2f8ff 100%);padding:60px 0;border-bottom:1px solid rgba(15,23,42,0.04)}
+.hero-inner{display:flex;gap:24px;align-items:center}
+.hero-text{flex:1}
+.hero-text h1{font-size:34px;margin:0 0 12px}
+.hero-text p{color:var(--muted);margin:0 0 18px}
+.hero-ctas a{margin-inline:8px}
+.hero-art{width:360px;display:flex;flex-direction:column;gap:12px}
+.card{background:var(--surface);padding:16px;border-radius:14px;box-shadow:0 8px 24px rgba(2,6,23,0.06)}
+.card h3{color:var(--primary)}
+.card h3{margin:0 0 6px}
+.card-2{transform:translateY(10px)}
+
+.section-title{font-size:22px;margin:8px 0 18px}
+.services{padding:44px 0}
+.grid{display:grid;gap:18px}
+.cols-3{grid-template-columns:repeat(3,1fr)}
+.cols-2{grid-template-columns:repeat(2,1fr)}
+.service{background:var(--surface);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.04);text-align:right}
+.service h4{color:var(--text);margin:8px 0}
+
+/* زر واتساب عائم */
+.wa-fab{position:fixed;right:18px;bottom:18px;background:linear-gradient(180deg,var(--accent),#55b81f);color:#fff;border-radius:999px;padding:14px 16px;display:inline-flex;align-items:center;gap:10px;box-shadow:0 12px 30px rgba(111,210,44,0.18);text-decoration:none;font-weight:600}
+.wa-fab .wa-dot{width:20px;height:20px;border-radius:50%;background:#fff;display:inline-block;align-self:center}
+.wa-fab:hover{transform:translateY(-4px);transition:transform .16s ease}
+
+/* تحسينات ثانوية */
+.hero{background:linear-gradient(180deg, #f6fbff 0%, #eef8ff 100%);padding:70px 0;border-bottom:1px solid rgba(11,99,198,0.04)}
+.hero-text h1{font-size:38px}
+.hero-art .card{border-left:4px solid var(--accent)}
+
+@media(max-width:900px){
+  .wa-fab{right:14px;bottom:14px;padding:12px 14px}
+}
+.service .icon{width:36px;height:36px;color:var(--primary);margin-bottom:8px}
+
+.why{padding:40px 0}
+.why-list{list-style:none;padding:0;margin:0}
+.why-list li{padding:10px 0;border-bottom:1px dashed rgba(15,23,42,0.04)}
+.why-art img{width:100%;border-radius:12px}
+
+.contact{padding:44px 0}
+.contact-grid{align-items:start}
+.contact-form label{display:block;margin-bottom:12px}
+.contact-form input,.contact-form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(15,23,42,0.08)}
+.contact-info{background:linear-gradient(180deg,#fff 0%,#f8fbff 100%);padding:20px;border-radius:12px}
+
+.site-footer{border-top:1px solid rgba(15,23,42,0.04);padding:18px 0;background:transparent}
+.footer-inner{display:flex;justify-content:space-between;align-items:center}
+.footer-nav a{margin-inline:8px;color:var(--muted);text-decoration:none}
+
+@media(max-width:900px){
+  .hero-inner{flex-direction:column}
+  .cols-3{grid-template-columns:1fr}
+  .cols-2{grid-template-columns:1fr}
+  .header-inner{flex-direction:column;gap:12px}
+}
